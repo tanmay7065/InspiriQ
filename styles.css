@@ -1,4 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Poppins:wght@700&display=swap');
+/* Dark Mode Toggle Button */
+#mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Light Mode (Default) */
+body {
+    background: white;
+    color: black;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .quote-box {
+    background: #1e1e1e;
+    color: white;
+}
+
 body {
     background: white; /* Set pure white background */
     display: flex;
