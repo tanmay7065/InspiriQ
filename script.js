@@ -208,6 +208,29 @@ document.querySelector('.voice-btn').addEventListener('click', () => {
     window.speechSynthesis.speak(speech);
 });
 
+const modeToggle = document.getElementById("mode-toggle");
+
+// Load user preference from localStorage
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    modeToggle.textContent = "☀️";
+}
+
+// Toggle between dark and light mode
+modeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    // Save preference
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        modeToggle.textContent = "☀️";
+    } else {
+        localStorage.setItem("theme", "light");
+        modeToggle.textContent = "🌙";
+    }
+});
+
+
 document.querySelector('.share-btn').addEventListener('click', () => {
     const text = document.querySelector('.quote').textContent + " " + document.querySelector('.author').textContent;
     if (navigator.share) {
