@@ -246,3 +246,7 @@ body.dark-mode #tutorial-btn,
 body.dark-mode #mode-toggle {
     background: #555555;
 }
+.site-title {
+  text-align: center !important; /* Force center alignment */
+  width: 100%; /* Full width */
+}
