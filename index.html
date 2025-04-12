@@ -3,49 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inpiri Q - best Motivational Quotes</title>
+  <title>Daily Motivational Quotes | InspiriQ - Get Inspired Today</title>
+  <meta name="description" content="Get daily motivational quotes from InspiriQ. Uplift your mood with inspirational sayings from famous personalities like Steve Jobs, Einstein, and more.">
+  <meta name="keywords" content="motivational quotes, daily inspiration, positive sayings, life quotes, success quotes">
+  <meta name="author" content="InspiriQ">
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7613232613595732"
-     crossorigin="anonymous"></script>
-  <title>InspiriQ Thoughts</title>
-    <meta name="description" content="Welcome to InspiriQ Thoughts – Your daily source of inspiring quotes and thoughts.">
-    <meta name="keywords" content="InspiriQ Thoughts, inspiring quotes, daily inspiration">
-  <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-  </script>
 </head>
 <body>
-  <!-- Tutorial Button (fixed at top left, no animation) -->
-  <button id="tutorial-btn">?</button>
-  <!-- Dark/Light Mode Toggle (fixed at top right) -->
-  <button id="mode-toggle">🌙</button>
-  
-  <!-- Site Title remains static -->
-  <h1 class="site-title">InpiriQ THOUGHTS</h1>
-  
-  <!-- Animated Quote Container (only the quote-box and controls animate on gestures) -->
-  <div class="quote-container">
-      <div class="quote-box">
-          <p class="quote">"Stay hungry, stay foolish."</p>
-          <p class="author">- Steve Jobs</p>
-      </div>
-      <!-- Next button now triggers a fade animation (different from swipe's slide) -->
-      <button class="next-btn">Next</button>
+  <header>
+    <!-- Tutorial Button (fixed at top left, no animation) -->
+    <button id="tutorial-btn" aria-label="Open tutorial">?</button>
+    <!-- Dark/Light Mode Toggle (fixed at top right) -->
+    <button id="mode-toggle" aria-label="Toggle dark mode">🌙</button>
+  </header>
+
+  <main>
+    <!-- Site Title remains static -->
+    <h1 class="site-title">Inpiri Q</h1>
+    
+    <!-- Animated Quote Container -->
+    <section class="quote-container" aria-live="polite">
+      <article class="quote-box">
+        <blockquote class="quote">"Stay hungry, stay foolish."</blockquote>
+        <p class="author">- Steve Jobs</p>
+      </article>
+      <!-- Next button now triggers a fade animation -->
+      <button class="next-btn" aria-label="Next quote">Next</button>
       <div class="buttons">
-          <button class="voice-btn">Voice</button>
-          <button class="share-btn">Share</button>
+        <button class="voice-btn" aria-label="Listen to quote">Voice</button>
+        <button class="share-btn" aria-label="Share quote">Share</button>
       </div>
-  </div>
+    </section>
+  </main>
   
   <!-- Tutorial Modal -->
-  <div id="tutorial-modal" class="modal">
-      <div class="modal-content">
-          <h2>Gesture Tutorial</h2>
-          <p>Swipe up on the quote box to see the next quote.</p>
-          <p>Swipe down on the quote box to see the previous quote.</p>
-          <button id="close-tutorial">Close</button>
-      </div>
+  <div id="tutorial-modal" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <h2>Gesture Tutorial</h2>
+      <p>Swipe up on the quote box to see the next quote.</p>
+      <p>Swipe down on the quote box to see the previous quote.</p>
+      <button id="close-tutorial" aria-label="Close tutorial">Close</button>
+    </div>
   </div>
+
+  <!-- Schema.org markup for rich snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "InspiriQ",
+    "description": "Daily motivational quotes application",
+    "applicationCategory": "Inspiration"
+  }
+  </script>
 </body>
 </html>
