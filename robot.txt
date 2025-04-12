@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://tanmay7065.github.io/InspiriQ/sitemap.xml
+Sitemap: https://inspiriq.netlify.app/sitemap.xml
